@@ -2,7 +2,7 @@
  * @Author: liulb 20224151@qq.com
  * @Date: 2022-07-03 17:13:06
  * @LastEditors: liulb 20224151@qq.com
- * @LastEditTime: 2022-07-03 18:05:11
+ * @LastEditTime: 2022-07-03 18:14:30
  * @FilePath: \vue-elementui-demo3\src\views\login\index.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -18,7 +18,7 @@
 		    <el-input type="password" v-model="ruleForm.pass" autocomplete="off"></el-input>
 		  </el-form-item>
 		  
-		   <el-button>确认</el-button>
+		   <el-button type="danger" @click="submitForm('ruleForm')">登录</el-button>
 		</el-form>
 	</div>
 </template>
@@ -41,6 +41,11 @@
 					            { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
 					          ],							  
 				}
+			}
+		},
+		methods:{
+			submitForm(){
+				this.$router.push("/home")//页面跳转
 			}
 		}
 	}
