@@ -2,7 +2,7 @@
  * @Author: liulb 20224151@qq.com
  * @Date: 2022-07-03 13:53:29
  * @LastEditors: liulb 20224151@qq.com
- * @LastEditTime: 2022-07-03 22:06:53
+ * @LastEditTime: 2022-07-13 13:57:38
  * @FilePath: \vue-elementui-demo3\src\router\index.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -13,10 +13,10 @@ import HomeView from '../views/HomeView.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    redirect:"/login"
-  },
+  // {
+  //   path: '/',
+  //   redirect:"/"
+  // },
   {
     path: '/about',
     name: 'about',
