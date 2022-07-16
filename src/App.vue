@@ -7,23 +7,25 @@
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
-  <div id="app" style="width:100px;height:60px;border:1px solid">
+  <div id="app" >
 	  
-    <item2>abc</item2>
-    <item2 :isActive="true">def</item2>
-    <!-- <router-view/> -->
+    <TitleMenu>
+      
+    </TitleMenu>
+    
+    
 	
   </div>
   
 </template>
 
 <script>
-import item2 from "./components/item2.vue"
+import TitleMenu from "./components/TitleMenu.vue"
 
 export default{
 
   components:{
-    item2,
+    TitleMenu,
   },
 };
 
