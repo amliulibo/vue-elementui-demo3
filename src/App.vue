@@ -10,11 +10,15 @@
 <template>
   <div id="app">
     <div style="width: 250px">
-      <TitleMenu :isActive="true" @active="test()">
+      <TitleMenu :isActive="activeID === 100" @active="activeID = 100">
         <template v-slot:title>发现频道</template>
         <template v-slot:icon>></template>
       </TitleMenu>
-      <ChannelList></ChannelList>
+
+      <ChannelList
+        :activeID="activeID"
+        @onSelect="activeID = $event"
+      ></ChannelList>
     </div>
   </div>
 </template>
@@ -30,12 +34,12 @@ export default {
   },
   data() {
     return {
-      select: false,
+      activeID: 100, //默认选中的是热门
     };
   },
   methods: {
-    test() {
-      console.log("sss");
+    test(msg) {
+      console.log(msg);
     },
   },
 };

@@ -8,7 +8,7 @@
 -->
 <template>
   <div class="channel">
-    <item-2 :isActive="isActive" @active="$emit('active')">
+    <item-2 :isActive="isActive" @active="$emit('onSelect')">
       <div class="inner">
         <span class="name">{{ channel_info.name }} </span>
         <span class="number">{{ channel_info.channel_count }}</span>
