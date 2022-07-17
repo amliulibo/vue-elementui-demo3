@@ -18,11 +18,8 @@ Vue.use(ElementUI)
 
 Vue.config.productionTip = false
 
-async function test() {
-  var v1 = await channelservice.getChannels()
-  console.log(v1)
-}
-test()
+
+
 new Vue({
   router,
   store,

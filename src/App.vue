@@ -10,6 +10,8 @@
 <template>
   <div id="app">
     <div style="width: 250px">
+      <Search></Search>
+
       <TitleMenu :isActive="activeID === 100" @active="activeID = 100">
         <template v-slot:title>发现频道</template>
         <template v-slot:icon>></template>
@@ -17,6 +19,7 @@
 
       <ChannelList
         :activeID="activeID"
+        :column_count="2"
         @onSelect="activeID = $event"
       ></ChannelList>
     </div>
@@ -26,11 +29,13 @@
 <script>
 import TitleMenu from "./components/TitleMenu.vue";
 import ChannelList from "./components/ChannelList.vue";
+import Search from "./components/Search.vue";
 
 export default {
   components: {
     TitleMenu,
     ChannelList,
+    Search,
   },
   data() {
     return {
