@@ -15,7 +15,8 @@
       </div>
     </div>
     <div class="collapse" @click="collapse_click">
-      <span>{{ isExpand ? "收起&lt" : "展开>" }}</span>
+      <span>{{ isExpand ? "收起" : "展开" }}</span>
+      <Icon :type="isExpand ? 'left' : 'right'" />
     </div>
   </div>
 </template>
@@ -23,10 +24,13 @@
 <script>
 import Channel from "./Channel.vue";
 import ChannelService from "@/services/channel";
+import Icon from "./Icon.vue";
 export default {
   components: {
     Channel,
+    Icon,
   },
+
   props: {
     activeID: {
       type: Number,

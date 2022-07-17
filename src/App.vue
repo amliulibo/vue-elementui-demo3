@@ -9,66 +9,18 @@
 
 <template>
   <div id="app">
-    <div style="width: 250px">
-      <Search></Search>
-
-      <TitleMenu :isActive="activeID === 100" @active="activeID = 100">
-        <template v-slot:title>发现频道</template>
-        <template v-slot:icon>></template>
-      </TitleMenu>
-
-      <ChannelList
-        :activeID="activeID"
-        :column_count="2"
-        @onSelect="activeID = $event"
-      ></ChannelList>
-    </div>
+    <Aside style="width: 300px" />
   </div>
 </template>
 
 <script>
-import TitleMenu from "./components/TitleMenu.vue";
-import ChannelList from "./components/ChannelList.vue";
-import Search from "./components/Search.vue";
-
+import Aside from "./components/Aside.vue";
 export default {
   components: {
-    TitleMenu,
-    ChannelList,
-    Search,
-  },
-  data() {
-    return {
-      activeID: 100, //默认选中的是热门
-    };
-  },
-  methods: {
-    test(msg) {
-      console.log(msg);
-    },
+    Aside,
   },
 };
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+<style scoped>
 </style>

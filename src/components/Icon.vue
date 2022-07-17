@@ -1,5 +1,7 @@
 <template>
-  <i class="iconfont" :class="[iconClass, extraClass]"></i>
+  <i class="iconfont" :class="[iconClass, extraClass]">
+    {{ iconClass }}
+  </i>
 </template>
 
 <script>
@@ -23,8 +25,7 @@ export default {
 
   computed: {
     iconClass() {
-      let v1 = this.iconMap[this.type];
-      console.log("iconClass=", v1);
+      let v1 = iconMap[this.type];
       return v1;
     },
   },
